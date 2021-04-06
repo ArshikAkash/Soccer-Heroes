@@ -1,0 +1,30 @@
+.team img {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.team-details {
+    display: flex;
+    color: rgb(233, 233, 233);
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(10, 28, 88);
+}
+.team-details img {
+    margin-left: 50px;
+    margin-bottom: 17px;
+}
+.fullDetails {
+    color: rgb(233, 233, 233);
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 0px;
+    border-radius: 00px 00px 10px 10px;
+    background-color: rgb(10, 28, 88);
+    word-wrap: break-word;
+}
+.fullDetails h2 {
+    margin: 0;
+}
