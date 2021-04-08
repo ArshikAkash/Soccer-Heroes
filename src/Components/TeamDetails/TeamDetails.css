@@ -2,6 +2,19 @@
     margin-top: 20px;
     border-radius: 10px;
 }
+.team {
+    background-color: #dadada;
+}
+.team-box {
+    display: flex;
+}
+.team-box img {
+    width: 5%;
+    margin: 0px 20px 0px 20px;
+}
+.team-box p {
+    margin: 0;
+}
 .team-details {
     display: flex;
     color: rgb(233, 233, 233);
@@ -10,7 +23,7 @@
     margin-top: 50px;
     margin-bottom: 0px;
     border-radius: 10px 10px 0px 0px;
-    background-color: rgb(10, 28, 88);
+    background-color: #0b1612;
 }
 .team-details img {
     margin-left: 50px;
@@ -22,9 +35,22 @@
     margin-right: 200px;
     margin-top: 0px;
     border-radius: 00px 00px 10px 10px;
-    background-color: rgb(10, 28, 88);
+    background-color: #182c25;
     word-wrap: break-word;
 }
-.fullDetails h2 {
+.fullDetails p {
     margin: 0;
+    font-size: larger;
+    padding: 15px;
+}
+.fullDetails h2 {
+    margin: 0 0 20px 0;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+.social-links img {
+    max-width: 75px;
+    padding: 0px 10px 10px 15px;
 }
