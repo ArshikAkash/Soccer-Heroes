@@ -16,12 +16,12 @@ const Home = () => {
             <h1>🔥SOCCER HEROES🔥</h1>
             <div style={{ width: '50%' }}>
                 <Box
+                    className='box'
                     display='inline-flex'
                     flexWrap='wrap'
-                    paddingTop={17}
                     css={{ maxWidth: 300 }}
                 >
-                    <Box p={2} bgcolor='#4298fb00'>
+                    <Box className='card-sizing' bgcolor='#4298fb00'>
                         <div className='teams'>
                             {teams.map((team) => (
                                 <Team key={team.idTeam} team={team}></Team>

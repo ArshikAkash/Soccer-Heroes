@@ -48,7 +48,7 @@ const TeamDetails = () => {
         <div className='team'>
             <img src={strTeamBanner} alt='' />
             <div className='team-details'>
-                <div style={{ width: '50%' }}>
+                <div className='detail-parts'>
                     <h1>{strAlternate}</h1>
                     <div className='team-box'>
                         <img src={founded} alt='' />
@@ -67,7 +67,7 @@ const TeamDetails = () => {
                         <p>Gender : {strGender}</p>
                     </div>
                 </div>
-                <div style={{ width: '50%' }}>
+                <div className='detail-parts'>
                     <img style={{ width: '80%' }} src={imgSrc} alt='' />
                 </div>
             </div>

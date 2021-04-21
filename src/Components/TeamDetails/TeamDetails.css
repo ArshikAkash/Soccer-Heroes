@@ -15,6 +15,9 @@
 .team-box p {
     margin: 0;
 }
+.detail-parts {
+    width: 50%;
+}
 .team-details {
     display: flex;
     color: rgb(233, 233, 233);
@@ -53,4 +56,45 @@
 .social-links img {
     max-width: 75px;
     padding: 0px 10px 10px 15px;
+}
+@media (max-width: 500px) {
+    .team img {
+        margin-top: 20px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .team-box img {
+        width: 5%;
+        padding-left: 27%;
+    }
+    .team-box p {
+        margin: 10px;
+    }
+
+    .team-details {
+        display: block;
+        color: rgb(233, 233, 233);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        border-radius: 10px 10px 0px 0px;
+        background-color: #0b1612;
+    }
+    .team-details img {
+        margin: 10px;
+    }
+    .detail-parts {
+        width: 100%;
+    }
+    .fullDetails {
+        color: rgb(233, 233, 233);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        border-radius: 00px 00px 10px 10px;
+        background-color: #182c25;
+        word-wrap: break-word;
+    }
 }

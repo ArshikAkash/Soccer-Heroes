@@ -1,6 +1,6 @@
 .teams {
     display: grid;
-    grid-gap: 0px;
+    grid-gap: 20px;
     grid-template-columns: auto auto auto;
 }
 .home {
@@ -16,4 +16,40 @@
     font-size: 43px;
     margin-top: 00px;
     padding-top: 135px;
+}
+.card-sizing {
+    padding-top: 10px;
+}
+.box {
+    padding-top: 170px;
+}
+@media (max-width: 500px) {
+    .teams {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto;
+    }
+    .home {
+        background-image: none;
+    }
+    .home h1 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    .box {
+        padding: 0px;
+    }
+    .card-sizing {
+        padding-left: 65px;
+    }
+}
+@media (max-width: 375px) {
+    .card-sizing {
+        padding-left: 40px;
+    }
+}
+@media (max-width: 320px) {
+    .card-sizing {
+        padding-left: 10px;
+    }
 }
