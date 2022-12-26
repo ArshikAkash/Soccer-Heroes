@@ -14,7 +14,7 @@ const TeamDetails = () => {
     const { id } = useParams();
     const [team, setTeam] = useState([]);
     useEffect(() => {
-        const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${id}`;
+        const url = `https://www.thesportsdb.com/api/v1/json/2/lookupteam.php?id=${id}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setTeam(data.teams[0]));
