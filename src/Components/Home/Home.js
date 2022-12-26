@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 const Home = () => {
     const [teams, setTeams] = useState([]);
     useEffect(() => {
-        const url = `https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League`;
+        const url = `https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=English%20Premier%20League`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setTeams(data.teams));
