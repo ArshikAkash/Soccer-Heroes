@@ -23,6 +23,10 @@
 .box {
     padding-top: 170px;
 }
+
+.team_details {
+    display: none;
+}
 @media (max-width: 500px) {
     .teams {
         display: grid;

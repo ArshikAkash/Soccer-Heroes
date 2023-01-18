@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import React from 'react';
 import flag from '../Images/flag .png';
 import founded from '../Images/found.png';
 import sport from '../Images/football.png';
@@ -9,16 +8,11 @@ import twitter from '../Images/Twitter.png';
 import youtube from '../Images/YouTube.png';
 import './TeamDetails.css';
 import { Button } from '@material-ui/core';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
 
 const TeamDetails = () => {
-    const { id } = useParams();
-    const [team, setTeam] = useState([]);
-    useEffect(() => {
-        const url = `https://www.thesportsdb.com/api/v1/json/2/lookupteam.php?id=${id}`;
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => setTeam(data.teams[0]));
-    }, [id]);
+    const [teamDetails] = useContext(UserContext);
     const {
         strTeamBanner,
         strAlternate,
@@ -27,12 +21,13 @@ const TeamDetails = () => {
         intFormedYear,
         strStadium,
         strSport,
-        strGender,
         strDescriptionEN,
         strYoutube,
         strTwitter,
         strFacebook,
-    } = team;
+        strGender,
+    } = teamDetails;
+
     const genderName = { strGender };
     let imgSrc;
 
@@ -75,7 +70,7 @@ const TeamDetails = () => {
                 <h2>About Team</h2>
                 <p>{strDescriptionEN}</p>
                 <h3 style={{ borderBottom: '1px dotted white' }}>
-                    Connect Us On
+                    Connect with this team. Click on the icons
                 </h3>
                 <div className='social-links'>
                     <Button href={`https://${strFacebook}`} target='_blank'>

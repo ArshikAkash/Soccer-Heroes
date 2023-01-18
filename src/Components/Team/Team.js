@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import './Team.css';
 import { useHistory } from 'react-router';
+import { UserContext } from '../../App';
 
 const useStyles = makeStyles({
     root: {
@@ -31,18 +32,18 @@ const useStyles = makeStyles({
 
 const Team = (props) => {
     const classes = useStyles();
+    const [teamDetails, setTeamDetails] = useContext(UserContext);
 
-    const {
-        strAlternate,
-        strStadiumLocation,
-        strTeamBadge,
-        idTeam,
-    } = props.team;
+    const { strTeam, strStadiumLocation, strTeamBadge } = props.team;
 
     const history = useHistory();
     const showTeamDetails = () => {
-        const url = `/team/${idTeam}`;
+        const url = `/team/${strTeam}`;
         history.push(url);
+    };
+    const setDetails = () => {
+        setTeamDetails(props.team);
+        console.log(teamDetails);
     };
 
     return (
@@ -57,7 +58,7 @@ const Team = (props) => {
                     />
                     <CardContent>
                         <Typography gutterBottom variant='h5' component='h2'>
-                            {strAlternate}
+                            {strTeam}
                         </Typography>
                         <Typography
                             variant='body2'
@@ -70,7 +71,8 @@ const Team = (props) => {
                 </CardActionArea>
                 <CardActions>
                     <Button
-                        onClick={() => showTeamDetails(idTeam)}
+                        onMouseOver={() => setDetails()}
+                        onClick={() => showTeamDetails()}
                         variant='contained'
                         color='primary'
                         className={classes.button}
